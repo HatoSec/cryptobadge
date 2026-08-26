@@ -1,0 +1,2 @@
+Command: /home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/hato/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/hato/Projects/07-display-drawing/build/display-drawing.elf /home/hato/Projects/07-display-drawing/build/bootloader/bootloader.elf -m '/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/hato/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+Error: Monitor requires standard input to be attached to TTY. Try using a different terminal.

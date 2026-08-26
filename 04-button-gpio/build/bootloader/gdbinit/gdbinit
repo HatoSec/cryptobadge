@@ -1,0 +1,2 @@
+source /home/hato/Projects/04-button-gpio/build/bootloader/gdbinit/symbols
+source /home/hato/Projects/04-button-gpio/build/bootloader/gdbinit/connect

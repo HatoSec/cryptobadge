@@ -1,0 +1,1723 @@
+Command: /home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/hato/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/hato/Projects/06-display-init/build/display-init.elf /home/hato/Projects/06-display-init/build/bootloader/bootloader.elf -m '/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/hato/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizec vaddESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c0dc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (92) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (122) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (135) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (135) boot: Disabling RNG early entropy source...[0m
+[0;32mI (148) cpu_start: Unicore app[0m
+[0;32mI (156) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (170) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (175) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (183) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (187) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (191) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (195) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (201) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (249) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (135) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (183) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (201) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=1, io_config=0x3fc931b8, ret_io=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc92f70: 0xa5a5a5a5 0xa5a5a5a5 0x3c028db0 0x4038c9ca 0x3fc8fc00 0x3c028db0 0x3fc8fc10 0x3c023792
+3fc92f90: 0x3fc8fc14 0x3fc92fa4 0x3fc8fc18 0x3c023860 0x3fc8fc1c 0x00333735 0x00000000 0x65737361
+3fc92fb0: 0x66207472 0x656c6961 0x78203a64 0x75657551 0x6e654765 0x63697265 0x61657243 0x71206574
+3fc92fd0: 0x65756575 0x353a632e 0x28203337 0x654e7870 0x65755177 0x00296575 0x00000010 0x00000004
+3fc92ff0: 0x003e0000 0x00000010 0x00000000 0x4038094a 0x3fc93e7c 0x00000008 0x00000004 0x4038ab36
+3fc93010: 0x00000804 0x00000054 0x3fc917e0 0x4038ab78 0x40382aee 0x00000000 0x3fc91b90 0x403807f0
+3fc93030: 0x00000804 0x00000054 0x00000003 0x40385706 0xa5a5a5a5 0x3fc9413c 0x00000004 0x4038ab36
+3fc93050: 0x00000804 0x0000007c 0x3fc917e0 0x4038ab78 0x00000000 0x00000000 0x3fc91b90 0x403807f0
+3fc93070: 0x00000804 0x00000000 0x00000000 0x40000000 0xa5a5a5a5 0x00000804 0x3fc94194 0x00000000
+3fc93090: 0x00000014 0x00000000 0x3fc93150 0x40385920 0x00000000 0x00000000 0x00000000 0x00000000
+3fc930b0: 0x3fc9401c 0x00000001 0x3fc93150 0x4201023e 0x00000001 0x00003043 0x00000004 0x00000001
+3fc930d0: 0x04c4b400 0x01312d00 0x01312d00 0x00000000 0xffffffff 0x00000000 0x04c4b400 0x00000001
+3fc930f0: 0x00000000 0x01312d00 0x00000080 0x00000000 0x00000800 0x3fc9412c 0x00000001 0x04c4b400
+3fc93110: 0x00000001 0x00000040 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3fc931e4
+3fc93130: 0x00000001 0x3fc931b8 0x3fc94008 0x4200ad46 0x00000003 0x0000009c 0x00000000 0x00000000
+3fc93150: 0x00000000 0x00000000 0x00000000 0x00000000 0x01312d00 0x00000000 0x00000000 0x00000001
+3fc93170: 0x00000010 0x00000000 0x40381510 0x4200a498 0x00001800 0x00000010 0x00000000 0x00000000
+3fc93190: 0x00000000 0x00000003 0x3c023000 0x42009406 0x00000000 0x00000000 0x3fc93b9c 0x40385a8e
+3fc931b0: 0x003e0000 0x00001800 0x00000001 0x00000000 0x00000000 0x01312d00 0x00000000 0x00000000
+3fc931d0: 0x00000000 0x00000008 0x00000008 0x00000000 0x00000000 0x3fc9326c 0x00000007 0xffffffff
+3fc931f0: 0x00000006 0xffffffff 0xffffffff 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc93210: 0x0000c800 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x42009696
+3fc93230: 0x00000000 0x3fc9326c 0x3c0236cc 0x4038c6d4 0x00000000 0x00000010 0x00000010 0x3fc9326c
+3fc93250: 0x00000000 0x00000003 0x3c023000 0x4201866e 0x00000000 0x3fc93ca4 0x3fc93284 0x000000ff
+3fc93270: 0x3c023658 0x00000003 0x3c023000 0x42018672 0x00000000 0x00001388 0x00000001 0x00000000
+3fc93290: 0x00000000 0x00000000 0x00000000 0x403863e4 0x00000000 0x00000000 0x00000000 0x00000000
+3fc932b0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fc932d0: 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x3fc93230 0x00000000 0x3fc90ab8 0x3fc90ab8 0x3fc932dc
+3fc932f0: 0x3fc90ab0 0x00000018 0x00000000 0x00000000 0x3fc932dc 0x00000000 0x00000001 0x3fc922d8
+3fc93310: 0x6e69616d 0x00000000 0x00000000 0x00000000 0x3fc932d0 0x00000001 0x00000000 0x00000000
+3fc93330: 0x00000000 0x00000000 0x3fc91e1c 0x3fc91e84 0x3fc91eec 0x00000000 0x00000000 0x00000001
+3fc93350: 0x00000000 0x00000000 0x00000000 0x42005310 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (135) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc92f70: 0xa5a5a5a5 0xa5a5a5a5 0x3c028db0 0x4038c9ca 0x3fc8fc00 0x3c028db0 0x3fc8fc10 0x3c023792
+3fc92f90: 0x3fc8fc14 0x3fc92fa4 0x3fc8fc18 0x3c023860 0x3fc8fc1c 0x00333735 0x00000000 0x65737361
+3fc92fb0: 0x66207472 0x656c6961 0x78203a64 0x75657551 0x6e654765 0x63697265 0x61657243 0x71206574
+3fc92fd0: 0x65756575 0x353a632e 0x28203337 0x654e7870 0x65755177 0x00296575 0x00000010 0x00000004
+0x00000004 0x4038ab36
+3fc93010: 0x00000804 0x00000054 0x3fc917e0 0x4038ab78 0x40382aee 0x00000000 0x3fc91b90 0x403807f0
+3fc93030: 0x00000804 0x00000054 0x00000003 0x40385706 0xa5a5a5a5 0x3fc9413c 0x00000004 0x4038ab36
+3fc93050: 0x00000804 0x0000007c 0x3fc917e0 0x4038ab78 0x00000000 0x00000000 0x3fc91b90 0x403807f0
+3fc93070: 0x00000804 0x00000000 0x00000000 0x40000000 0xa5a5a5a5 0x00000804 0x3fc94194 0x00000000
+3fc93090: 0x00000014 0x00000000 0x3fc93150 0x40385920 0x00000000 0x00000000 0x00000000 0x00000000
+3fc930b0: 0x3fc9401c 0x00000001 0x3fc93150 0x4201023e 0x00000001 0x00003043 0x00000004 0x00000001
+3fc930d0: 0x04c4b400 0x01312d00 0x01312d00 0x00000000 0xffffffff 0x00000000 0x04c4b400 0x00000001
+3fc930f0: 0x00000000 0x01312d00 0x00000080 0x00000000 0x00000800 0x3fc9412c 0x00000001 0x04c4b400
+3fc93110: 0x00000001 0x00000040 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3fc931e4
+3fc93130: 0x00000001 0x3fc931b8 0x3fc94008 0x4200ad46 0x00000003 0x0000009c 0x00000000 0x00000000
+3fc93150: 0x00000000 0x00000000 0x00000000 0x00000000 0x01312d00 0x00000000 0x00000000 0x00000001
+3fc93170: 0x00000010 0x00000000 0x40381510 0x4200a498 0x00001800 0x00000010 0x00000000 0x00000000
+3fc93190: 0x00000000 0x00000003 0x3c023000 0x42009406 0x00000000 0x00000000 0x3fc93b9c 0x40385a8e
+3fc931b0: 0x003e0000 0x00001800 0x00000001 0x00000000 0x00000000 0x01312d00 0x00000000 0x00000000
+3fc931d0: 0x00000000 0x00000008 0x00000008 0x00000000 0x00000000 0x3fc9326c 0x00000007 0xffffffff
+3fc931f0: 0x00000006 0xffffffff 0xffffffff 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc93210: 0x0000c800 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x42009696
+3fc93230: 0x00000000 0x3fc9326c 0x3c0236cc 0x4038c6d4 0x00000000 0x00000010 0x00000010 0x3fc9326c
+3fc93250: 0x00000000 0x00000003 0x3c023000 0x4201866e 0x00000000 0x3fc93ca4 0x3fc93284 0x000000ff
+3fc93270: 0x3c023658 0x00000003 0x3c023000 0x42018672 0x00000000 0x00001388 0x00000001 0x00000000
+3fc93290: 0x00000000 0x00000000 0x00000000 0x403863e4 0x00000000 0x00000000 0x00000000 0x00000000
+3fc932b0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fc932d0: 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x3fc93230 0x00000000 0x3fc90ab8 0x3fc90ab8 0x3fc932dc
+3fc932f0: 0x3fc90ab0 0x00000018 0x00000000 0x00000000 0x3fc932dc 0x00000000 0x00000001 0x3fc922d8
+3fc93310: 0x6e69616d 0x00000000 0x00000000 0x00000000 0x3fc932d0 0x00000001 0x00000000 0x00000000
+3fc93330: 0x00000000 0x00000000 0x3fc91e1c 0x3fc91e84 0x3fc91eec 0x00000000 0x00000000 0x00000001
+3fc93350: 0x00000000 0x00000000 0x00000000 0x42005310 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b92
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=0x3c023792 "", line=<optimized out>, func=<optimized out>, expr=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x00000000 in ?? ()
+Backtrace stopped: frame did not save the PC
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "/home/hato/Projects/06-display-init/build/bootloader/bootloader.elf"
+panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/panic.c:491
+#1  0x4038526a in esp_system_abort (details=details@entry=0x3fc92fac "assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)") at /home/hato/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4038c9ca in __assert_func (file=file@entry=0x3c023792 "", line=line@entry=573, func=<optimized out>, func@entry=0x3c028db0 <__func__.21> "", expr=expr@entry=0x3c023860 "") at /home/hato/esp-idf/components/newlib/src/assert.c:81
+#3  0x40385920 in xQueueGenericCreate (uxQueueLength=0, uxItemSize=uxItemSize@entry=20, ucQueueType=ucQueueType@entry=0 '\000') at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:573
+#4  0x4201023e in spi_bus_add_device (host_id=host_id@entry=SPI2_HOST, dev_config=dev_config@entry=0x3fc93150, handle=handle@entry=0x3fc9401c) at /home/hato/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:537
+#5  0x4200ad46 in esp_lcd_new_panel_io_spi (bus=bus@entry=1, io_config=io_config@entry=0x3fc931b8, ret_io=ret_io@entry=0x3fc931e4) at /home/hato/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:93
+#6  0x42009406 in display_init () at /home/hato/Projects/06-display-init/main/main.c:62
+#7  0x42009696 in app_main () at /home/hato/Projects/06-display-init/main/main.c:98
+#8  0x42018672 in main_task (args=<error reading variable: value has been optimized out>) at /home/hato/esp-idf/components/freertos/app_startup.c:208
+#9  0x403863e4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/hato/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: bba877c8a
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40385392
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 19:23:19[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (24) boot: efuse block revision: v1.3[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0f0h ( 45296) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001b118 vaddr=3fc8ee00 size=01afch (  6908) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001cc1c vaddr=40380000 size=033fch ( 13308) load[0m
+[0;32mI (100) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=194b0h (103600) map[0m
+[0;32mI (121) esp_image: segment 4: paddr=000394d8 vaddr=403833fc size=0b820h ( 47136) load[0m
+[0;32mI (130) esp_image: segment 5: paddr=00044d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (134) boot: Disabling RNG early entropy source...[0m
+[0;32mI (147) cpu_start: Unicore app[0m
+[0;32mI (155) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (156) cpu_start: Pro cpu start user code[0m
+[0;32mI (156) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     display-init[0m
+[0;32mI (166) app_init: App version:      1[0m
+[0;32mI (169) app_init: Compile time:     Aug 12 2026 19:23:09[0m
+[0;32mI (174) app_init: ELF file SHA256:  bba877c8a...[0m
+[0;32mI (179) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (186) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC917E0 len 0002E820 (186 KiB): RAM[0m
+[0;32mI (206) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (212) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (224) spi_flash: detected chip: generic[0m
+[0;32mI (227) spi_flash: flash io: dio[0m
+[0;33mW (230) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (242) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (248) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (255) main_task: Started on CPU0[0m
+[0;32mI (255) main_task: Calling app_main()[0m
+
+assert failed: xQueueGenericCreate queue.c:573 (pxNewQueue)
+Core  0 register dump:
+MEPC    : 0x403852ac  RA      : 0x4038526a  SP      : 0x3fc92f70  GP      : 0x3fc8f600  
+TP      : 0x3fc932d0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x0000008c  S1      : 0x00000001  A0      : 0x3fc92fac  A1      : 0x3fc8fc1d  
+A2      : 0x00000001  A3      : 0x3fc92fe7  A4      : 0x00000001  A5      : 0x3fc91000  
+A6      : 0x00000008  A7      : 0x76757473  S2      : 0x00000009  S3      : 0x3fc930bb  
+S4      : 0x3fc8fc1c  S5      : 0x3fc9404c  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000080  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 

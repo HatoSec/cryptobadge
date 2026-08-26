@@ -1,0 +1,2 @@
+source /home/hato/Projects/02-hello-world/build/bootloader/gdbinit/symbols
+source /home/hato/Projects/02-hello-world/build/bootloader/gdbinit/connect

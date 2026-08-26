@@ -1,0 +1,2 @@
+source /home/hato/Projects/09-ir-communicatin/build/gdbinit/symbols
+source /home/hato/Projects/09-ir-communicatin/build/gdbinit/connect

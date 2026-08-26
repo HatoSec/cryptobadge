@@ -1,0 +1,2 @@
+source /home/hato/Projects/10-eeprom/build/bootloader/gdbinit/symbols
+source /home/hato/Projects/10-eeprom/build/bootloader/gdbinit/connect

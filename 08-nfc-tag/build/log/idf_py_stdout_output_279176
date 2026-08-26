@@ -1,0 +1,129 @@
+Command: /home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/hato/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/hato/Projects/08-nfc-tag/build/display-drawing.elf /home/hato/Projects/08-nfc-tag/build/bootloader/bootloader.elf -m '/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/hato/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (101) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeI (378) nfc: [11] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xe (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40382122
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x155c
+load:0x403cbf10,len:0xc84
+load:0x403ce710,len:0x2fa4
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug 12 2026 22:50:32[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (25) boot: efuse block revision: v1.3[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09c94h ( 40084) map[0m
+[0;32mI (89) esp_image: segment 1: paddr=00019cbc vaddr=3fc8c400 size=01788h (  6024) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001b44c vaddr=40380000 size=04bcch ( 19404) load[0m
+[0;32mI (101) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=173a4h ( 95140) map[0m
+[0;32mI (120) esp_image: segment 4: paddr=000373cc vaddr=40384bcc size=07824h ( 30756) load[0m
+[0;32mI (126) esp_image: segment 5: paddr=0003ebf8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (130) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (130) boot: Disabling RNG early entropy source...[0m
+[0;32mI (145) cpu_start: Unicore app[0m
+[0;32mI (153) cpu_start: GPIO 20 and 21 are used as console UART I/O pins[0m
+[0;32mI (154) cpu_start: Pro cpu start user code[0m
+[0;32mI (154) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (156) app_init: Application information:[0m
+[0;32mI (159) app_init: Project name:     display-drawing[0m
+[0;32mI (164) app_init: App version:      1[0m
+[0;32mI (167) app_init: Compile time:     Aug 12 2026 22:50:22[0m
+[0;32mI (173) app_init: ELF file SHA256:  a87636ae3...[0m
+[0;32mI (177) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (181) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (184) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (188) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (192) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (199) heap_init: At 3FC8EA70 len 00031590 (197 KiB): RAM[0m
+[0;32mI (204) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (210) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (216) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (222) spi_flash: detected chip: generic[0m
+[0;32mI (225) spi_flash: flash io: dio[0m
+[0;33mW (228) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (240) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (246) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (253) main_task: Started on CPU0[0m
+[0;32mI (253) main_task: Calling app_main()[0m
+[0;32mI (253) nfc: Initializing I2C...[0m
+[0;32mI (263) nfc: NTAG UID: 04:58:0D:22:10:90:00[0m
+[0;32mI (263) nfc: --- NTAG Memory Dump ---[0m
+[0;32mI (263) nfc: [00] 04 58 0D 82 22 10 90 00 44 00 00 00 E1 10 6D 00[0m
+[0;32mI (273) nfc: [01] 03 22 D1 01 1E 54 02 65 6E 43 72 79 70 74 6F 68[0m
+[0;32mI (283) nfc: [02] 61 63 6B 20 42 61 64 67 65 20 44 45 46 20 43 4F[0m
+[0;32mI (283) nfc: [03] 4E 20 33 34 FE 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (293) nfc: [04] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (293) nfc: [05] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (303) nfc: [06] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (303) nfc: [07] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (313) nfc: [08] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (323) nfc: [09] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (323) nfc: [0A] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (333) nfc: [0B] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (333) nfc: [0C] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (343) nfc: [0D] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (343) nfc: [0E] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (353) nfc: [0F] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (363) nfc: [10] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (363) nfc: [11] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (373) nfc: [12] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (373) nfc: [13] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (383) nfc: [14] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (393) nfc: [15] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (393) nfc: [16] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (403) nfc: [17] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (403) nfc: [18] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (413) nfc: [19] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (413) nfc: [1A] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (423) nfc: [1B] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (433) nfc: [1C] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (433) nfc: [1D] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (443) nfc: [1E] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (443) nfc: [1F] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (453) nfc: [20] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (463) nfc: [21] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (463) nfc: [22] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (473) nfc: [23] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (473) nfc: [24] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (483) nfc: [25] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (483) nfc: [26] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (493) nfc: [27] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (503) nfc: [28] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (503) nfc: [29] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (513) nfc: [2A] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (513) nfc: [2B] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (523) nfc: [2C] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (533) nfc: [2D] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (533) nfc: [2E] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (543) nfc: [2F] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (543) nfc: [30] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (553) nfc: [31] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (553) nfc: [32] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (563) nfc: [33] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (573) nfc: [34] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (573) nfc: [35] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (583) nfc: [36] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (583) nfc: [37] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (593) nfc: [38] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF[0m
+[0;32mI (593) nfc: [39] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (603) nfc: [3A] 01 00 F8 48 08 01 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (603) nfc: [0m
+Writing NDEF text record...
+[0;32mI (613) nfc: Wrote NDEF text record: "Cryptohack Badge DEF CON 34" (37 bytes, 3 blocks)[0m
+[0;32mI (623) nfc: [0m
+After writing:
+[0;32mI (623) nfc: --- NTAG Memory Dump ---[0m
+[0;32mI (633) nfc: [0m
+Done! Tap the badge with your phone to read the NFC tag.

@@ -1,0 +1,18 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/hato/Projects/06-display-init/build/bootloader/esp-idf/esptool_py && /home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/hato/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/hato/Projects/06-display-init/build/bootloader/bootloader.bin
+Bootloader binary size 0x51e0 bytes. 0x2e20 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable display-init.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.12.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /home/hato/Projects/06-display-init/build/display-init.bin
+[9/9] cd /home/hato/Projects/06-display-init/build/esp-idf/esptool_py && /home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/hato/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hato/Projects/06-display-init/build/partition_table/partition-table.bin /home/hato/Projects/06-display-init/build/display-init.bin
+display-init.bin binary size 0x34d50 bytes. Smallest app partition is 0x100000 bytes. 0xcb2b0 bytes (79%) free.

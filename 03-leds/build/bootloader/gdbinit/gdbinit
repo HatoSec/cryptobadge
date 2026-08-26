@@ -1,0 +1,2 @@
+source /home/hato/Projects/03-leds/build/bootloader/gdbinit/symbols
+source /home/hato/Projects/03-leds/build/bootloader/gdbinit/connect

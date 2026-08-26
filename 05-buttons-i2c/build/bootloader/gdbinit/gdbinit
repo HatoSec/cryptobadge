@@ -1,0 +1,2 @@
+source /home/hato/Projects/05-buttons-i2c/build/bootloader/gdbinit/symbols
+source /home/hato/Projects/05-buttons-i2c/build/bootloader/gdbinit/connect

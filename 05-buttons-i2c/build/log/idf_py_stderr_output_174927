@@ -1,0 +1,469 @@
+Command: /home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/hato/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/hato/Projects/05-buttons-i2c/build/buttons-i2c.elf /home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf -m '/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/hato/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4004c0d8: [0;33muart_tx_one_char_uart.part.0[0m[0m in [0;32mROM[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/hato/Projects/05-buttons-i2c/build/buttons-i2c.elf', '-ex', 'add-symbol-file /home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf', '-ex', 'target remote | "/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python" -m esp_idf_panic_decoder --target esp32c3 "/tmp/tmpd7ttuy8e"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf"\nRemote communication error.  Target disconnected: error while reading: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/hato/Projects/05-buttons-i2c/build/buttons-i2c.elf', '-ex', 'add-symbol-file /home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf', '-ex', 'target remote | "/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python" -m esp_idf_panic_decoder --target esp32c3 "/tmp/tmpvfampdi9"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf"\nRemote communication error.  Target disconnected: error while reading: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/home/hato/Projects/05-buttons-i2c/build/buttons-i2c.elf', '-ex', 'add-symbol-file /home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf', '-ex', 'target remote | "/home/hato/.espressif/python_env/idf5.5_py3.13_env/bin/python" -m esp_idf_panic_decoder --target esp32c3 "/tmp/tmp63_lwl4r"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/home/hato/Projects/05-buttons-i2c/build/bootloader/bootloader.elf"\nRemote communication error.  Target disconnected: error while reading: Connection reset by peer.\nNo stack.\n'
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x4200941e: [0;33mi2c_init[0m[0m at [0;32m/home/hato/Projects/05-buttons-i2c/main/main.c[0m[0m:[1;31m42[0m
+[0m--- 0x4038456d: [0;33m_esp_error_check_failed[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x403845b8: [0;33mpanic_abort[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m491[0m
+[0m--- 0x40384576: [0;33mesp_vApplicationTickHook[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m31[0m
+[0m--- 0x40380001: [0;33m_vector_table[0m[0m at [0;32m/home/hato/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4038469e: [0;33mesp_restart_noos[0m[0m at [0;32m/home/hato/esp-idf/components/esp_system/port/soc/esp32c3/system_internal.c[0m[0m:[1;31m115[0m
+[0m--- 0x403cbf10: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/hato/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x403ce710: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/hato/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x403cbf1a: [0;33mcall_s

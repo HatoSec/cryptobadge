@@ -1,0 +1,2 @@
+source /home/hato/Projects/07-display-drawing/build/bootloader/gdbinit/symbols
+source /home/hato/Projects/07-display-drawing/build/bootloader/gdbinit/connect
